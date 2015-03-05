@@ -3,13 +3,13 @@ package br.odb.minefield.commands;
 
 import br.odb.gameapp.ConsoleApplication;
 import br.odb.gameapp.UserCommandLineAction;
-import br.odb.minefield.MinefieldMainApp;
+import br.odb.minefield.MinefieldGame;
 import br.odb.minefield.model.Board;
 
 
 public class NewGameCommand extends UserCommandLineAction {
 
-	public NewGameCommand( MinefieldMainApp app) {
+	public NewGameCommand( ConsoleApplication app) {
 		super( );
 	}
 
@@ -25,7 +25,7 @@ public class NewGameCommand extends UserCommandLineAction {
 
 	@Override
 	public void run(ConsoleApplication app, String operand ) throws Exception {
-		MinefieldMainApp game = (MinefieldMainApp) app;
+		MinefieldGame game = (MinefieldGame) app;
 		game.board = new Board( Integer.parseInt( operand ) );
 	}
 

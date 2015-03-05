@@ -12,25 +12,21 @@ public class QuitCommand extends UserMetaCommandLineAction {
 
 	@Override
 	public String getHelp() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	public int requiredOperands() {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public void run(ConsoleApplication app, String arg1) throws Exception {
-		
+	
 	}
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return "quit";
 	}
-
 }

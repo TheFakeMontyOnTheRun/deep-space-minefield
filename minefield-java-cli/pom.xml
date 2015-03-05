@@ -1,0 +1,55 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>br.odb.minefield</groupId>
+  <artifactId>minefield-cli</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>minefield</name>
+  <url>http://www.montyprojects.com</url>
+  <dependencies>
+    <dependency>
+      <groupId>br.odb</groupId>
+      <artifactId>gameapp</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+
+    <dependency>
+      <groupId>br.odb.minefield</groupId>
+      <artifactId>minefield-core</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
+  
+
+	<properties>
+		<maven.compiler.source>1.7</maven.compiler.source>
+		<maven.compiler.target>1.7</maven.compiler.target>
+
+	</properties>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.8.1</version>
+				<configuration>
+					<include>**/*Spec.*</include>
+					<include>**/*Test.*</include>
+				</configuration>
+			</plugin>
+			<plugin>
+			<groupId>
+				org.codehaus.mojo
+			</groupId>
+			<artifactId>
+				exec-maven-plugin
+			</artifactId>
+			<configuration>
+				<mainClass>br.odb.minefield.MinefieldMainApp</mainClass>
+			</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

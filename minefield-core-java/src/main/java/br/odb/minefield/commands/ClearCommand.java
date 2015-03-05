@@ -18,8 +18,6 @@ public class ClearCommand extends UserCommandLineAction {
 
 	@Override
 	public void run(ConsoleApplication app, String operands) throws Exception {
-            
-            
 	}
 
 	@Override

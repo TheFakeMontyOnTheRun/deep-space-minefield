@@ -10,25 +10,10 @@ import br.odb.minefield.commands.QuitCommand;
 import br.odb.minefield.commands.StatusCommand;
 import br.odb.minefield.model.Board;
 
-public class MinefieldMainApp extends ConsoleApplication {
+public class MinefieldGame extends ConsoleApplication {
 
 	public Board board;
 
-    
-    public MinefieldMainApp() {
-
-    }
-
-    public static void main(String[] args) {
-
-        // This will probably never change.
-        MinefieldMainApp doom = (MinefieldMainApp) new MinefieldMainApp()
-                .setAppName("Minefield!")
-                .setAuthorName("Daniel 'MontyOnTheRun' Monteiro")
-                .setLicenseName("3-Clause BSD").setReleaseYear(2014);
-        doom.createDefaultClient();
-        doom.start();
-    }
 
     @Override
     public void log(String tag, String message) {
@@ -74,7 +59,7 @@ public class MinefieldMainApp extends ConsoleApplication {
         return super.init();
     }
 
-	public void updateVisuals(MinefieldMainApp game) {
+	public void updateVisuals(MinefieldGame game) {
 		try {
 			new StatusCommand( game).run(game, "");
 		} catch (Exception e) {
